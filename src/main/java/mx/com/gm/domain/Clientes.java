@@ -27,7 +27,7 @@ public class Clientes implements Serializable{
     
     @NotEmpty
     @Column(name="nombre")
-    private String nombre;
+    private String nombre; 
     
     
 }

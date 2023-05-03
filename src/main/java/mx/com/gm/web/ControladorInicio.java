@@ -48,8 +48,9 @@ public class ControladorInicio {
      
      //@RequestMapping(value= "/guardar", method={RequestMethod.GET,RequestMethod.POST})
      @PostMapping("/guardar")
-     public String guardar(@Valid Clientes clientes, Errors errors){
+     public String guardar(@RequestBody @Valid  Clientes clientes, Errors errors){
          
+         log.info("antes de rretornar modificar: ");
         if(errors.hasErrors()){
         
             return "modificar";
